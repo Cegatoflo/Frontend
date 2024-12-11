@@ -20,14 +20,12 @@ export function LoginForm() {
                 email,
                 password
             }, {
-                withCredentials: true // Permite el envío de cookies
+                withCredentials: true 
             });
 
             console.log('Inicio de sesión exitoso:', response.data);
 
-            // Si el backend ya envía el token como cookie, no necesitas guardarlo aquí
-            // Puedes acceder a la cookie en futuras solicitudes automáticamente
-            navigate('/menu'); // Navega a la página de menú después del inicio de sesión exitoso
+            navigate('/menu'); 
         } catch (err) {
             setError(err.response?.data?.message || 'Error en el inicio de sesión');
             console.error('Error en el inicio de sesión:', err);
