@@ -47,7 +47,8 @@ export function LoginForm() {
             console.error('Error al solicitar el cambio de contraseña:', err);
         }
     };
-
+  
+    
     return (
         <>
             <Helmet>
